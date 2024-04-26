@@ -79,3 +79,5 @@ For more information on dbt:
 - Read the [dbt viewpoint](https://docs.getdbt.com/docs/about/viewpoint).
 - Join the [dbt community](http://community.getdbt.com/).
 ---
+
+### For every new terminal, cd jaffle-shop-classic and then paste source dbt-env/bin/activate
