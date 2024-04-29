@@ -80,4 +80,6 @@ For more information on dbt:
 - Join the [dbt community](http://community.getdbt.com/).
 ---
 
-### For every new terminal, cd jaffle-shop-classic and then paste source dbt-env/bin/activate
+### For every new terminal, cd jaffle-shop-classic and then paste source dbt-env/bin/activate     dbt debug --config-dir
+### pip install dbt-adapter_name --force-reinstall pip install dbt-databricks --force-reinstall
+### alias env_dbt='source dbt_env/bin/activate'
