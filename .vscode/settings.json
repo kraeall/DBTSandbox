@@ -4,5 +4,6 @@
         "textMateRules": []
     },
     "dbt.queryLimit": 500,
-    "dbt.enableNewLineagePanel": true
+    "dbt.enableNewLineagePanel": true,
+    "dbt.queryScale": 0.62
 }
