@@ -80,8 +80,17 @@ For more information on dbt:
 - Join the [dbt community](http://community.getdbt.com/).
 ---
 
-### For every new terminal, cd jaffle-shop-classic and then paste source dbt-env/bin/activate     dbt debug --config-dir
-### pip install dbt-adapter_name --force-reinstall pip install dbt-databricks --force-reinstall
-### alias env_dbt='source dbt_env/bin/activate'
-## command to reinstall python required dependencies / packages
-## must NOT commit pyvenv.cfg file
+### Notes for Setup
+```For every new terminal, cd jaffle-shop-classic and then paste source venv/bin/activate     dbt debug --config-dir
+pip install dbt-adapter_name --force-reinstall pip install dbt-databricks --force-reinstall
+alias env_dbt='source dbt_env/bin/activate'
+command to reinstall python required dependencies / packages
+must NOT commit pyvenv.cfg file
+```
+
+### Run this code for py env setup, activation, and dependencies
+```bash
+python3 -m venv venv 
+source venv/bin/activate
+python3 -m pip install -r requirements.txt --upgrade
+```

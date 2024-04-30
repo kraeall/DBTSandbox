@@ -1,5 +1,6 @@
 dbt-snowflake
 dbt-databricks
+databricks-cli
 dbt-core
 dbt-postgres
 streamlit
