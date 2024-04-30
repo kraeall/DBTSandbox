@@ -1,0 +1,17 @@
+dbt-snowflake
+dbt-databricks
+dbt-core
+dbt-postgres
+streamlit
+pyarrow
+snowflake-sqlalchemy
+snowflake-connector-python
+snowflake-snowpark-python[pandas]
+pandas
+numpy
+pyyaml
+argparse
+streamlit-aggrid
+streamlit-pandas
+plotly
+icecream
