@@ -94,3 +94,33 @@ python3 -m venv venv
 source venv/bin/activate
 python3 -m pip install -r requirements.txt --upgrade
 ```
+### This strip yml file auto generates a model
+```
+version: 2
+
+sources:
+  - name: stripe
+
+    loaded_at_field: _batched_at
+    loader: airflow
+
+    freshness:
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+
+    loader: airflow
+
+    tables:
+      - name: payments
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+
+          - name: order_id
+            description: Foreign key to jaffle_shop orders
+
+          - name: amount
+            description: Amount in US cents
+```
