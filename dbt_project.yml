@@ -23,9 +23,9 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 vars:
   "dbt_date:time_zone": "America/Los_Angeles"
 
-seeds:
-  jaffle_shop:
-    +schema: dbt_project
+##seeds:
+##  jaffle_shop:
+##    schema: RAW
 
 models:
   jaffle_shop:

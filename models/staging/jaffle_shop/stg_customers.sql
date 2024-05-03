@@ -1,18 +1,20 @@
-with source_customers as (
+with 
+source as (
 
-    select * from {{ ref('raw_customers') }}
+--select * from {{ source('jaffle_shop', 'customers') }}
+  select * from {{ ref('raw_customers') }}
 
 ),
 
-renamed_customers as (
+staged as (
 
     select
         id as customer_id,
         first_name,
         last_name
 
-    from source_customers
+    from source
 
 )
 
-select * from renamed_customers
+select * from staged
