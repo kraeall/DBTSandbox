@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: default_raw
+    schema: dbt_project
+    tables:
+      - name: customers
+      - name: orders

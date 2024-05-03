@@ -1,22 +1,18 @@
-with source as (
+with source_customers as (
 
-    {#-
-    Normally we would select from the table here, but we are using seeds to load
-    our data in this project
-    #}
-    select * from {{ ref('raw_customers') }}
+    select * from {{ source('jaffle_shop', 'customers') }}
 
 ),
 
-renamed as (
+renamed_customers as (
 
     select
         id as customer_id,
         first_name,
         last_name
 
-    from source
+    from source_customers
 
 )
 
-select * from renamed
+select * from renamed_customers
