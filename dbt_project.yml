@@ -25,7 +25,7 @@ vars:
 
 ##seeds:
 ##  jaffle_shop:
-##    schema: RAW
+##  +schema: STG
 
 models:
   jaffle_shop:

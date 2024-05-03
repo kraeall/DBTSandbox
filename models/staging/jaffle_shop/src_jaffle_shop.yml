@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: jaffle_shop
     database: DBT_PLAYGROUND
-    schema: RAW
+    schema: STG
     tables:
-      - name: customers
-      - name: orders
+      - name: raw_customers
+      - name: raw_orders
