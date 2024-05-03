@@ -25,7 +25,7 @@ vars:
 
 seeds:
   jaffle_shop:
-    +schema: raw
+    +schema: dbt_project
 
 models:
   jaffle_shop:
