@@ -1,3 +1,4 @@
+
 with
 
 source as (
@@ -13,6 +14,8 @@ renamed as (
         ----------  ids
         id as order_item_id,
         order_id,
+
+        ---------- properties
         sku as product_id
 
     from source

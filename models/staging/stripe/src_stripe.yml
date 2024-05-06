@@ -4,7 +4,7 @@ sources:
   - name: stripe
     database: DBT_PLAYGROUND
     description: Raw stripe data.
-    schema: STG
+    schema: RAW
     tables:
       - name: raw_stripe_payments
         description: Raw stripe payments data.    
