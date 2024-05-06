@@ -22,3 +22,20 @@ sources:
             tests:
               - unique
               - not_null
+      - name: raw_items
+        description: Raw order items data.
+        columns:
+          - name: id
+            description: Primary key for order items.
+            tests:
+              - unique
+              - not_null   
+      - name: raw_products
+        description: Raw products data.
+        columns:
+          - name: sku
+            description: Primary key for products.
+            tests:
+              - unique
+              - not_null         
+                                

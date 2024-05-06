@@ -3,6 +3,13 @@ version: 2
 sources:
   - name: stripe
     database: DBT_PLAYGROUND
+    description: Raw stripe data.
     schema: STG
     tables:
       - name: raw_stripe_payments
+        description: Raw stripe payments data.    
+      - name: raw_supplies 
+        description: Raw supplies data.    
+        columns:
+          - name: id
+            description: Primary key for supplies.
