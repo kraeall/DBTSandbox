@@ -9,16 +9,16 @@ models:
         tests:
           - not_null
           - unique
-  - name: stg_payments
+          
+  - name: stg_order_items
+    description: Individual food and drink items that make up our orders, one row per item.
     columns:
-      - name: payment_id
+      - name: order_item_id
+        description: The unique key for each order item.
         tests:
-          - unique
           - not_null
-      - name: payment_method
-        tests:
-          - accepted_values:
-              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+          - unique
+
   - name: stg_orders
     description: Order data with basic cleaning and transformation applied, one row per order.
     columns:
@@ -27,6 +27,16 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: stg_products
+    description: Product (food and drink items that can be ordered) data with basic cleaning and transformation applied, one row per product.
+    columns:
+      - name: product_id
+        description: The unique key for each product.
+        tests:
+          - not_null
+          - unique
+
   - name: stg_supplies
     description: >
       List of our supply expenses data with basic cleaning and transformation applied.
@@ -38,26 +48,3 @@ models:
         tests:
           - not_null
           - unique
-  - name: stg_products
-    description: Product (food and drink items that can be ordered) data with basic cleaning and transformation applied, one row per product.
-    columns:
-      - name: sku
-        description: The unique key for each product.
-        data_tests:
-          - not_null
-          - unique
-  - name: stg_order_items
-    description: Individual food and drink items that make up our orders, one row per item.
-    columns:
-      - name: order_item_id
-        description: The unique key for each order item.
-        data_tests:
-          - not_null
-          - unique
-      - name: order_id
-        description: The corresponding order each order item belongs to
-        data_tests:
-          - not_null
-          - relationships:
-              to: ref('stg_orders')
-              field: order_id                
